@@ -1,0 +1,274 @@
+:root{
+    --linear: linear-gradient(orange,red,blue);
+}
+.dark{
+    --backg:#000;
+    --form-bg:rgb(1, 8, 34);
+    --inp-bg:rgb(55, 1, 46);
+    --head-bg:rgba(9, 61, 129, 0.664);
+    --text:antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: var(--backg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+    transition: 0.5s;
+    z-index: 1000;
+    overflow: hidden;
+    cursor: pointer;
+}
+.navigation.active{
+    width: 250px;
+    height: 350px;
+}
+.toggle{
+    position: relative;
+    background: #982081;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.5s;
+}
+.toggle::before{
+    content: '+';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    font-weight: 900;
+    color: snow;
+    transition: 0.7s;
+}
+.toggle.active{
+    background: teal;
+}
+.toggle.active::before{
+    transform: rotate(675deg);
+    transition: 0.7s;
+}
+
+
+
+.form{
+    background: var(--form-bg);
+    padding:  25px 25px 40px 25px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+#head-title{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 150px;
+    background: var(--head-bg);
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'knul';
+    box-shadow: 0 0 10px 0px rgba(9, 61, 129, 0.664);
+    transition: 0.5s;
+    color: whitesmoke;
+}
+#player-name{
+    color: red;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+#head-title:hover{
+    box-shadow: 0 0 50px 0px rgba(9, 61, 129, 0.664);
+    color: violet;
+    transition: 0.5s;
+}
+input,select{
+    background: var(--inp-bg);
+    font-size: 20px;
+    width: 200px;
+    padding: 10px 30px;
+    border: 2px solid red;
+    color: var(--text);
+    outline: none;
+    border-radius: 40px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+input:active{
+    border: 2px solid rgb(12, 209, 5);
+    transition: 0.5s;
+}
+input[type="button"]{
+    border: 0px solid orangered;
+    box-shadow: 0px 0px 0px 0px orangered,
+                4px 4px 1px 0px orangered;
+    margin: auto;
+    transition: 0.5s;
+}
+input[type="reset"]{
+    padding: none;
+    border: 0px solid orangered;
+    box-shadow: 3px 3px 0px 0px orangered;
+    margin: 10px auto 10px auto;
+}
+input[type="button"]:hover,input[type="reset"]:hover{
+    box-shadow: 0 0 30px orangered;
+    transform: translate(3px,3px);
+    transition: 0.5s;
+    background: palegoldenrod;
+    color: rgb(55, 1, 46);
+}
+input[type="button"]:active,input[type="reset"]:active{
+    background: red;
+    color: azure;
+    transition: all 0.5s;
+}
+
+
+/**************** Container Section ******************************/
+#container{
+    transform: translateY(10%);
+    z-index: -1;
+    width: 256px;
+    height: 256px;
+    /* background: rgb(24, 4, 97); */
+    /* border: darkturquoise 2px solid; */
+    overflow: hidden;
+}
+.lodaer{
+    z-index: 3;
+    top: 25%;
+    left: 31%;
+    transform: translate(0%,-50%);
+    display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    position: absolute;
+    background: var(--backg);
+    border: 15px solid #45474b;
+    border-top-color: steelblue;
+    border-radius: 50%;
+    animation: anim 1s infinite linear;
+}
+#container img{
+    position: relative;
+    overflow: hidden;
+}
+@keyframes anim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#switcher{
+    position: absolute;
+    top: 0;
+    padding: 10px 5px;
+    background: var(--head-bg);
+    border: none;
+    outline: none;
+    box-shadow: 3px 3px 0px #03e4ff;
+    font-size: 18px;
+}
+
+
+#setter{
+    margin-top: 40px;
+    font-size: 30px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    font-family: 'brizzler';
+    text-align: center;
+    text-transform: uppercase;
+}
+@media screen and (max-width:480px){
+    body{
+        flex-direction: column;
+    }
+}
+
+
+
+
+.container{
+    position: absolute;
+    background: #0a0206;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+.loader span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    transform: rotate(calc(18deg * var(--i)));
+    animation: hue 6s linear infinite;
+}
+.loader span::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: chartreuse;
+    box-shadow: 0 0 5px chartreuse,
+                0 0 10px chartreuse,
+                0 0 15px chartreuse,
+                0 0 30px chartreuse,
+                0 0 40px chartreuse;
+    animation: size 2s linear infinite reverse;
+    animation-delay: calc(0.1s * var(--i));
+    transform: scale(0);
+}
+@keyframes hue {
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes size {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+

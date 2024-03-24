@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA MOBILE 21 TODOS LOS ARTES DE LAS CARTAS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/jquery-3.5.1.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body class="dark">
+    <div class="navigation" id="nav">
+        <div class="toggle" id="toggle"></div>
+        <form class="form" method="GET">
+                <h3 id="head-title"> CARTAS DE FIFA MOBILE 21</h3>
+                <h3 id="player-name">POR JS TOTS YOUTUBE</h3>
+                
+                <select id="player-prog">
+                    <option value="BASE">BASE</option>
+                    <option value="BECKHAM">BECKHAM</option>
+                    <option value="DIVISION_RIVALS">DIVISION RIVALS</option>
+                    <option value="FF">FREEZE</option>
+                    <option value="GMR">GMR</option>
+                    <option value="HARVEST">HARVEST</option>
+                    <option value="LEGACY">LEGACY</option>
+                    <option value="LUNAR">LUNAR</option>
+                    <option value="MARQUEE">MARQUEE</option>
+                    <option value="PRIME_ICON">PRIME ICONS</option>
+                    <option value="SPRING">SPRING</option>
+                    <option value="TT">TOP TRANSFER</option>
+                    <option value="TOTW_STARTER">TOTW</option>
+                    <option value="TOTYU_ATT">UTOTY ATTACKER</option>
+                    <option value="TOTYU_MID">UTOTY MIDFIELDER</option>
+                    <option value="TOTYU_DEF">UTOTY DEFENDER</option>
+                    <option value="TOTYN_ATT">TOTY ATTACKER</option>
+                    <option value="TOTYN_MID">TOTY MIDFIELDER</option>
+                    <option value="TOTYN_DEF">TOTY DEFENDER</option>
+                    <option value="UTOTSR">UTOTS RESERVE</option>
+                    <option value="UTOTSS">UTOTS STARTER</option>
+                    <option value="SHAPESHIFTERS">METAMORFO</option>
+                    <option value="PRESEASON_FREEZE">HELADA DE LA PRETEMPORADA</option>
+                    <option value="PRESEASON_NOW_AND_LATER">PRESENTE Y FUTURO</option>
+                    
+                </select>
+                
+                <select id="player-vers">
+                    <option value="ELITE_1">80+</option>
+                    <option value="MASTER_1">90+</option>
+                    <option value="LEGEND_1">100+</option>
+                    <option value="LEGEND_2">120</option>
+                    <option value="LEGEND2_1">CARTAS BASE PLUS P1 110</option>
+                    <option value="LEGEND2_2">CARTAS BASE PLUS P2 110</option>
+                </select>
+          
+           <input type="button" value="CREAR CARTA" id="mCard">
+        
+    </div>
+
+    
+    <div id="container">
+        <div class="lodaer" id="lder"></div>
+        <img src="https://cdn-p2.frzdb.net/fifamobile/images/sprites_21/conv_playeranim_BASE_LEGEND2_2.png" id="anim_img">
+    </div>
+        
+        <div class="container" id=".loadanim">
+        <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:27;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:29;"></span>
+            <span style="--i:30;"></span>
+        </div>
+    </div>
+
+</body>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#nav" ).draggable();
+    } );
+    </script>
+
+<script>
+    $(window).on("load", function () {
+        $(".container").fadeOut("slow");
+    });
+</script>
+</html>
